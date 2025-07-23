@@ -40,10 +40,10 @@ This project investigates how different deep learning architectures perform when
 ## 🧠 Model Architectures
 
 ### 🛠 Custom CNN
-- 4 convolutional layers
+- 12 convolutional layers
 - 2 fully connected layers
 - Dropout and batch normalization
-- ~2.28 million parameters
+- ~11.7 million parameters
 - Trained from scratch
 
 ### 🛠 MobileNetV2
