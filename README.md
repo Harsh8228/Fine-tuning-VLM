@@ -1,4 +1,4 @@
-##🚗 Comparative Analysis of CNN, MobileNetV2, and SmolVLM on the Stanford Cars Dataset
+🚗 #Comparative Analysis of CNN, MobileNetV2, and SmolVLM on the Stanford Cars Dataset
 A machine learning study exploring how different deep learning architectures perform on fine-grained image classification using the Stanford Cars Dataset.
 
 📌 Overview
