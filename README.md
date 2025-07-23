@@ -1,97 +1,70 @@
-🚗 #Comparative Analysis of CNN, MobileNetV2, and SmolVLM on the Stanford Cars Dataset
-A machine learning study exploring how different deep learning architectures perform on fine-grained image classification using the Stanford Cars Dataset.
+# 🚗 Comparative Analysis of CNN, MobileNetV2, and SmolVLM on the Stanford Cars Dataset
 
-📌 Overview
-This project investigates and compares three deep learning models:
+A machine learning project comparing the performance of three deep learning architectures—Custom CNN, MobileNetV2, and SmolVLM—on the Stanford Cars dataset for fine-grained image classification.
 
-A custom-built Convolutional Neural Network (CNN)
+---
 
-MobileNetV2 with transfer learning and fine-tuning
+## 📌 Project Overview
 
-SmolVLM, a compact Vision-Language Model using QLoRA
+This project investigates how different deep learning architectures perform when fine-tuned on the Stanford Car dataset. Models are evaluated based on:
 
-The models are evaluated on their:
+- Classification accuracy  
+- Training convergence speed  
+- Computational efficiency  
 
-Classification accuracy
+---
 
-Convergence speed
+## 🎯 Research Objectives
 
-Computational efficiency
+### Primary Objective
+**How do different deep learning architectures (custom CNN, MobileNet V2, and SmolVLM) compare when fine-tuned on the Stanford Car dataset?**
 
-🎯 Objectives
-Primary Goal: Determine how different model architectures perform on a fine-grained classification task.
+### Secondary Objectives
+- Evaluate model performance across multiple metrics.
+- Determine if transfer learning significantly outperforms models trained from scratch.
 
-Secondary Goals:
+---
 
-Assess the value of fine-tuning pre-trained models
+## 📚 Dataset: Stanford Cars
 
-Evaluate trade-offs between performance and compute cost
+- **Total Images**: 16,185  
+- **Classes**: 196 car types (make, model, year)  
+- **Split**:  
+  - Training: 12,064 images (74.5%)  
+  - Testing: 4,121 images (25.5%)  
+- **Resolution**: High (avg. 500×300 pixels)  
+- **Challenges**: Fine-grained classification, variable lighting and orientation
 
-📚 Dataset
-Stanford Cars Dataset
+---
 
-16,185 high-resolution images
+## 🧠 Model Architectures
 
-196 car classes (make, model, year)
+### 🛠 Custom CNN
+- 4 convolutional layers
+- 2 fully connected layers
+- Dropout and batch normalization
+- ~2.28 million parameters
+- Trained from scratch
 
-Resplit into:
+### 🛠 MobileNetV2
+- Pretrained on ImageNet (1.2M images)
+- Added new classification head
+- Fine-tuned last 50 layers
+- Lightweight and fast to train
 
-Training: 12,064 images (74.5%)
+### 🛠 SmolVLM (IDEFICS-3)
+- Vision-language model with 2.8B parameters
+- Fine-tuned using **QLoRA** (4-bit quantization + LoRA adapters)
+- Only ~0.4% of parameters updated
+- Best zero-shot and contextual performance
 
-Testing: 4,121 images (25.5%)
+---
 
-Rich visual diversity: lighting, backgrounds, orientations
+## 📊 Results Summary
 
-🛠️ Methodology
-🔧 1. Custom CNN
-Built from scratch
-
-4 convolutional layers
-
-2 fully connected layers
-
-Batch normalization and dropout
-
-~2.28M parameters
-
-🔧 2. MobileNetV2
-Pretrained on ImageNet (1.2M images)
-
-New classification head added
-
-Fine-tuning last 50 layers
-
-Fast convergence and efficient performance
-
-🔧 3. SmolVLM (IDEFICS-3 architecture)
-2.8B parameter vision-language model
-
-Fine-tuned using QLoRA (4-bit quantization + LoRA adapters)
-
-Only ~0.4% of parameters are updated
-
-Strong contextual reasoning and zero-shot potential
-
-⚙️ Implementation
-Framework: TensorFlow / Keras
-
-Preprocessing:
-
-Normalization
-
-Data augmentation: rotation, flipping, shifting
-
-Training:
-
-Early stopping (patience=10)
-
-Batch size: 32
-
-Epochs: 70 (with early stop)
-
-📈 Results
-Model	Accuracy	Notes
-Custom CNN	12%	Poor convergence, underfits data
-MobileNetV2	78%	Good performance with fine-tuning
-SmolVLM	92%	Best accuracy with QLoRA
+| Model        | Accuracy | Notes                                        |
+|--------------|----------|----------------------------------------------|
+| Custom CNN   | 36%      | Low performance, underfit                    |
+| MobileNetV2  | 69%      | Strong balance of speed and accuracy         |
+| SmolVLM      | 92%      | Best performance using QLoRA fine-tuning     |
 
