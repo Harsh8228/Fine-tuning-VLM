@@ -25,7 +25,7 @@ This project investigates how different deep learning architectures perform when
 
 ---
 
-## 📚 Dataset: Stanford Cars
+## 📚 Dataset: Stanford Cars (huggingface Harsh9699/Stanford_car_75_25_split)
 
 - **Total Images**: 16,185  
 - **Classes**: 196 car types (make, model, year)  
