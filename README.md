@@ -66,5 +66,5 @@ This project investigates how different deep learning architectures perform when
 |--------------|----------|----------------------------------------------|
 | Custom CNN   | 36%      | Low performance, underfit                    |
 | MobileNetV2  | 69%      | Strong balance of speed and accuracy         |
-| SmolVLM      | 92%      | Best performance using QLoRA fine-tuning     |
+| SmolVLM      | 96%      | Best performance using QLoRA fine-tuning     |
 
