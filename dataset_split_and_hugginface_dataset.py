@@ -93,7 +93,7 @@ print(f"Total images in train and test directories: {total_train_images + total_
 !pip install -U datasets huggingface_hub fsspec
 
 from huggingface_hub import login
-login("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")
+login("")
 
 from datasets import load_dataset, DatasetDict
 
@@ -160,5 +160,5 @@ def show_last_samples(split="test", n=6):
         ax.axis('off')
     plt.show()
 
-# Call it:
+
 show_last_samples("test", n=6)
